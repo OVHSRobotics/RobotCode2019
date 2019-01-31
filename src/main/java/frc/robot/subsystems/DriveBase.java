@@ -21,6 +21,11 @@ public class DriveBase extends Subsystem {
         this.rearLeftMotor = new VictorSP(RobotMap.REAR_LEFT_DRIVE_MOTOR_PORT);
         this.frontRightMotor = new VictorSP(RobotMap.FRONT_RIGHT_DRIVE_MOTOR_PORT);
         this.rearRightMotor = new VictorSP(RobotMap.REAR_RIGHT_DRIVE_MOTOR_PORT);
+
+        this.frontLeftMotor.setInverted(RobotMap.FRONT_LEFT_DRIVE_MOTOR_INVERTED);
+        this.rearLeftMotor.setInverted(RobotMap.REAR_LEFT_DRIVE_MOTOR_INVERTED);
+        this.frontRightMotor.setInverted(RobotMap.FRONT_RIGHT_DRIVE_MOTOR_INVERTED);
+        this.rearRightMotor.setInverted(RobotMap.REAR_RIGHT_DRIVE_MOTOR_INVERTED);
         
         SpeedControllerGroup leftMotors = new SpeedControllerGroup(this.frontLeftMotor, this.rearLeftMotor);
         SpeedControllerGroup rightMotors = new SpeedControllerGroup(this.frontRightMotor, this.rearRightMotor);

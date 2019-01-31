@@ -20,6 +20,10 @@ public class RobotMap {
     public final static int REAR_LEFT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_1;
     public final static int FRONT_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_2;
     public final static int REAR_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_3;
+    public final static boolean FRONT_LEFT_DRIVE_MOTOR_INVERTED = false;
+    public final static boolean REAR_LEFT_DRIVE_MOTOR_INVERTED = false;
+    public final static boolean FRONT_RIGHT_DRIVE_MOTOR_INVERTED = false;
+    public final static boolean REAR_RIGHT_DRIVE_MOTOR_INVERTED = false;
 
     public final static int ELEVATOR_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_4;
     public final static boolean ELEVATOR_MOTOR_INVERT_DIRECTION = false;
