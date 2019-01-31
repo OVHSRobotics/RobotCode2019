@@ -44,11 +44,27 @@ public class OI {
 
     Joystick xbox = new Joystick(RobotMap.XBOX_PORT);
 
-    public double getXAxis() {
-        return xbox.getRawAxis(RobotMap.Xbox.X_AXIS);
+    public double getDriveRotation() {
+        return xbox.getRawAxis(RobotMap.Xbox.LEFT_STICK_X_AXIS);
     }
 
-    public double getYAxis() {
-        return xbox.getRawAxis(RobotMap.Xbox.Y_AXIS);
+    public double getDriveSpeed() {
+        // Use negative because -1.0 is up on the controller
+        return -xbox.getRawAxis(RobotMap.Xbox.LEFT_STICK_Y_AXIS);
+    }
+
+    public double getElevatorSpeed() {
+        // Use negative because -1.0 is up on the controller
+        double axisValue = -xbox.getRawAxis(RobotMap.Xbox.RIGHT_STICK_Y_AXIS);
+        if (axisValue == 0) {
+            // return if it's 0 to avoid division by 0
+            return axisValue;
+        }
+
+        // Use square inputs
+        int sign = (int)(axisValue / Math.abs(axisValue));
+        axisValue = sign * Math.pow(axisValue, 2);
+
+        return axisValue;
     }
 }

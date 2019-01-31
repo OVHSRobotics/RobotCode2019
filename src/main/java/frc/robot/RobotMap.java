@@ -21,12 +21,17 @@ public class RobotMap {
     public final static int FRONT_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_2;
     public final static int REAR_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_3;
 
+    public final static int ELEVATOR_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_4;
+    public final static boolean ELEVATOR_MOTOR_INVERT_DIRECTION = false;
+
     // Xbox Port
     public final static int XBOX_PORT = 0;
 
     // ====== DO NOT MODIFY BELOW HERE ======
 
     public class Xbox {
+        // http://team358.org/files/programming/ControlSystem2009-/XBoxControlMapping.jpg
+
         // Xbox controller button mappings
         public final static int A = 1;
         public final static int B = 2;
@@ -40,8 +45,10 @@ public class RobotMap {
         public final static int L_TRIGGER = 4;
 
         // Xbox controller axis mappings
-        public final static int X_AXIS = 1;
-        public final static int Y_AXIS = 4;
+        public final static int LEFT_STICK_X_AXIS = 1;
+        public final static int LEFT_STICK_Y_AXIS = 2;
+        public final static int RIGHT_STICK_X_AXIS = 4;
+        public final static int RIGHT_STICK_Y_AXIS = 5;
     }
     
     public class RoboRIO {
