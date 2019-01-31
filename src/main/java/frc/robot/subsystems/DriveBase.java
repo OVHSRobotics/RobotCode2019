@@ -7,9 +7,6 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
 import frc.robot.commands.DriveJoystick;
 
-/**
- * An example subsystem.  You can replace me with your own Subsystem.
- */
 public class DriveBase extends Subsystem {
 
     public DifferentialDrive driveTrain;

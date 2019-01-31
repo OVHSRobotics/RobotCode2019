@@ -24,6 +24,10 @@ public class RobotMap {
     public final static int ELEVATOR_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_4;
     public final static boolean ELEVATOR_MOTOR_INVERT_DIRECTION = false;
 
+    public final static int BALL_GATE_PORT = RobotMap.RoboRIO.PWM_PORT_0;
+    public final static double BALL_GATE_OPEN_POSITION = 1.0;
+    public final static double BALL_GATE_CLOSED_POSITION = 0.0;
+
     // Xbox Port
     public final static int XBOX_PORT = 0;
 

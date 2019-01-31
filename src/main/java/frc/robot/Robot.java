@@ -26,6 +26,7 @@ public class Robot extends TimedRobot {
     
     public static DriveBase driveBase = new DriveBase();
     public static Elevator elevator = new Elevator();
+    public static BallGate ballGate = new BallGate();
 
     public static OI oi;
 
