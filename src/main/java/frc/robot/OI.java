@@ -7,7 +7,7 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.XboxController;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -42,7 +42,7 @@ public class OI {
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
 
-    Joystick xbox = new Joystick(RobotMap.XBOX_PORT);
+    XboxController xbox = new XboxController(RobotMap.XBOX_PORT);
 
     public double getDriveRotation() {
         return xbox.getRawAxis(RobotMap.Xbox.LEFT_STICK_X_AXIS);
