@@ -4,6 +4,7 @@ import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import frc.robot.Robot;
 import frc.robot.RobotMap;
 import frc.robot.commands.DriveJoystick;
 
@@ -44,6 +45,11 @@ public class DriveBase extends Subsystem {
     }
 
     public void arcadeDrive(double speed, double rotation, boolean squareInputs) {
+        if (!Robot.oi.getDriveTurboStatus()) {
+            speed = speed * RobotMap.DRIVE_SPEED_SCALING_FACTOR;
+            rotation = rotation * RobotMap.DRIVE_SPEED_SCALING_FACTOR;
+        }
+
         this.driveTrain.arcadeDrive(speed, rotation, squareInputs);
     }
 }

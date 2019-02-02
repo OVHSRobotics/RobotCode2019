@@ -53,6 +53,10 @@ public class OI {
         return -xbox.getRawAxis(RobotMap.Xbox.LEFT_STICK_Y_AXIS);
     }
 
+    public boolean getDriveTurboStatus() {
+        return xbox.getRawButton(RobotMap.Xbox.START);
+    }
+
     public double getElevatorSpeed() {
         // Use negative because -1.0 is up on the controller
         double axisValue = -xbox.getRawAxis(RobotMap.Xbox.RIGHT_STICK_Y_AXIS);
