@@ -49,13 +49,13 @@ public class RobotMap {
         public final static int R_BUMPER = 6;
         public final static int BACK = 7;
         public final static int START = 8;	
-        public final static int R_TRIGGER = 3;
-        public final static int L_TRIGGER = 4;
 
         // Xbox controller axis mappings
-        public final static int LEFT_STICK_X_AXIS = 4;
+        public final static int LEFT_STICK_X_AXIS = 0;
         public final static int LEFT_STICK_Y_AXIS = 1;
-        public final static int RIGHT_STICK_X_AXIS = 6;
+        public final static int LEFT_TRIGGER = 2;
+        public final static int RIGHT_TRIGGER = 3;
+        public final static int RIGHT_STICK_X_AXIS = 4;
         public final static int RIGHT_STICK_Y_AXIS = 5;
     }
     
