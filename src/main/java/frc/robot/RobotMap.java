@@ -16,19 +16,19 @@ package frc.robot;
 public class RobotMap {
 
     // Robot mappings
-    public final static int FRONT_LEFT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_0;
-    public final static int REAR_LEFT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_1;
-    public final static int FRONT_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_2;
-    public final static int REAR_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_3;
+    public final static int FRONT_LEFT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.PWM_PORT_0;
+    public final static int REAR_LEFT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.PWM_PORT_1;
+    public final static int FRONT_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.PWM_PORT_2;
+    public final static int REAR_RIGHT_DRIVE_MOTOR_PORT = RobotMap.RoboRIO.PWM_PORT_3;
     public final static boolean FRONT_LEFT_DRIVE_MOTOR_INVERTED = false;
     public final static boolean REAR_LEFT_DRIVE_MOTOR_INVERTED = false;
     public final static boolean FRONT_RIGHT_DRIVE_MOTOR_INVERTED = false;
     public final static boolean REAR_RIGHT_DRIVE_MOTOR_INVERTED = false;
 
-    public final static int ELEVATOR_MOTOR_PORT = RobotMap.RoboRIO.DIO_PORT_4;
+    public final static int ELEVATOR_MOTOR_PORT = RobotMap.RoboRIO.PWM_PORT_4;
     public final static boolean ELEVATOR_MOTOR_INVERT_DIRECTION = false;
 
-    public final static int BALL_GATE_PORT = RobotMap.RoboRIO.PWM_PORT_0;
+    public final static int BALL_GATE_PORT = RobotMap.RoboRIO.PWM_PORT_5;
     public final static double BALL_GATE_OPEN_POSITION = 1.0;
     public final static double BALL_GATE_CLOSED_POSITION = 0.0;
 

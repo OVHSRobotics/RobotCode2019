@@ -62,7 +62,7 @@ public class OI {
         }
 
         // Use square inputs
-        int sign = (int)(axisValue / Math.abs(axisValue));
+        double sign = axisValue / Math.abs(axisValue);
         axisValue = sign * Math.pow(axisValue, 2);
 
         return axisValue;

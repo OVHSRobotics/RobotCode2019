@@ -10,7 +10,7 @@ public class Elevator extends Subsystem {
     private VictorSP motor;
 
     public Elevator() {
-        this.motor = new VictorSP(RobotMap.FRONT_LEFT_DRIVE_MOTOR_PORT);
+        this.motor = new VictorSP(RobotMap.ELEVATOR_MOTOR_PORT);
         this.motor.setInverted(RobotMap.ELEVATOR_MOTOR_INVERT_DIRECTION);
     }
 
