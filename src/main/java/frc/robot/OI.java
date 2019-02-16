@@ -8,6 +8,9 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.*;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -44,6 +47,20 @@ public class OI {
 
     XboxController xbox = new XboxController(RobotMap.XBOX_PORT);
 
+    public OI() {
+        Button aButton = new JoystickButton(xbox, RobotMap.Xbox.A);
+        Button bButton = new JoystickButton(xbox, RobotMap.Xbox.B);
+
+        try {
+            aButton.whenPressed(new OpenBallGate());
+            bButton.whenPressed(new CloseBallGate());
+        }
+        finally {
+            aButton.close();
+            bButton.close();
+        }
+    }
+
     public double getDriveRotation() {
         return xbox.getRawAxis(RobotMap.Xbox.RIGHT_STICK_X_AXIS);
     }
@@ -59,7 +76,12 @@ public class OI {
 
     public double getElevatorSpeed() {
         // Use negative because -1.0 is up on the controller
+<<<<<<< HEAD
         double axisValue = -xbox.getRawAxis(RobotMap.Xbox.LEFT_TRIGGER);
+=======
+        //double axisValue = -xbox.getRawAxis(RobotMap.Xbox.RIGHT_STICK_Y_AXIS);
+        double axisValue = xbox.getRawAxis(RobotMap.Xbox.LEFT_TRIGGER) + xbox.getRawAxis(RobotMap.Xbox.RIGHT_TRIGGER);
+>>>>>>> origin/master
         if (axisValue == 0) {
             // return if it's 0 to avoid division by 0
             return axisValue;
