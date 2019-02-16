@@ -41,7 +41,8 @@ public class RobotMap {
 
     // Elevator motor scaling
     // Scaling factor to slow the motor down (e.g. 0.7 is 70% of max power)
-    public final static double ELEVATOR_SPEED_SCALING_FACTOR = 0.5;
+    public final static double ELEVATOR_SPEED_UP_SCALING_FACTOR =  0.5;
+    public final static double ELEVATOR_SPEED_DOWN_SCALING_FACTOR =  0.25;
 
     // ====== DO NOT MODIFY BELOW HERE ======
 

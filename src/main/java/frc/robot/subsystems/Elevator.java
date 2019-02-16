@@ -21,7 +21,11 @@ public class Elevator extends Subsystem {
     }
 
     public void setSpeed(double speed) {
-        speed = speed * RobotMap.ELEVATOR_SPEED_SCALING_FACTOR;
+        if (speed < 0) {
+            speed = speed * RobotMap.ELEVATOR_SPEED_DOWN_SCALING_FACTOR;
+        } else if (speed > 0) {
+            speed = speed * RobotMap.ELEVATOR_SPEED_UP_SCALING_FACTOR;
+        }
 
         // keep speed values between -1 and 1
         speed = Math.min(speed, 1.0);
