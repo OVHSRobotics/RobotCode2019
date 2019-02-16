@@ -76,12 +76,9 @@ public class OI {
 
     public double getElevatorSpeed() {
         // Use negative because -1.0 is up on the controller
-<<<<<<< HEAD
-        double axisValue = -xbox.getRawAxis(RobotMap.Xbox.LEFT_TRIGGER);
-=======
         //double axisValue = -xbox.getRawAxis(RobotMap.Xbox.RIGHT_STICK_Y_AXIS);
-        double axisValue = xbox.getRawAxis(RobotMap.Xbox.LEFT_TRIGGER) + xbox.getRawAxis(RobotMap.Xbox.RIGHT_TRIGGER);
->>>>>>> origin/master
+        // Triggers go from 0 to 1, so we need to negate the left trigger value to get the full range
+        double axisValue = -xbox.getRawAxis(RobotMap.Xbox.LEFT_TRIGGER) + xbox.getRawAxis(RobotMap.Xbox.RIGHT_TRIGGER);
         if (axisValue == 0) {
             // return if it's 0 to avoid division by 0
             return axisValue;
