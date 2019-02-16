@@ -50,6 +50,22 @@ public class DriveBase extends Subsystem {
             rotation = rotation * RobotMap.DRIVE_SPEED_SCALING_FACTOR;
         }
 
+        // Compensate for motors running at different max speeds
+        if (Math.abs(rotation) < 0.1) {
+            if (speed > 0) {
+                rotation = rotation - 0.05;
+            } else {
+                rotation = rotation - 0.12;
+            }
+        }
+
+        // Make sure we don't ask the robot to go past its limits
+        if (speed > 1) {
+            speed = 1;
+        } else if (speed < -1) {
+            speed = -1;
+        }
+
         this.driveTrain.arcadeDrive(speed, rotation, squareInputs);
     }
 }
