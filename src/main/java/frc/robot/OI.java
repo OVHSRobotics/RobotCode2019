@@ -45,7 +45,7 @@ public class OI {
     XboxController xbox = new XboxController(RobotMap.XBOX_PORT);
 
     public double getDriveRotation() {
-        return xbox.getRawAxis(RobotMap.Xbox.LEFT_STICK_X_AXIS);
+        return xbox.getRawAxis(RobotMap.Xbox.RIGHT_STICK_X_AXIS);
     }
 
     public double getDriveSpeed() {
@@ -59,7 +59,7 @@ public class OI {
 
     public double getElevatorSpeed() {
         // Use negative because -1.0 is up on the controller
-        double axisValue = -xbox.getRawAxis(RobotMap.Xbox.RIGHT_STICK_Y_AXIS);
+        double axisValue = -xbox.getRawAxis(RobotMap.Xbox.LEFT_TRIGGER);
         if (axisValue == 0) {
             // return if it's 0 to avoid division by 0
             return axisValue;
